@@ -1,23 +1,47 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import home_view from './views/home_view.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
+   mode: 'history',
+   routes: [
+   {
+   path: '/',
+   name: 'home_view',
+   component: home_view
+   },
+   {
+   path: '/create',
+   name: 'create_view',
+   component: () => import('./views/create.vue')
+   },
+   {
+   path: '/mycolors',
+   name: 'my_colors_view',
+   component: () => import('./views/my_colors.vue')
+   },
+   {
+   path: '/login',
+   name: 'login_view',
+   component: () => import('./views/login.vue')
+   },
+   {
+   path: '/signup',
+   name: 'sign_up_view',
+   component: () => import('./views/signup.vue')
+   },
+   {
+   path: '/account',
+   name: 'account_view',
+   component: () => import('./views/account.vue')
+   },
+   {
+   path: '/premium',
+   name: 'premium_view',
+   component: () => import('./views/premium.vue')
+   },
+   ]
 })
+
