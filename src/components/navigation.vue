@@ -41,6 +41,7 @@
    .navigation .nav_link {
       color: var(--linkColor);
       font-size: 1.35rem;
+      border-bottom: solid 1px transparent;
    }
    .navigation .nav_link .first_letter {
       display: inline-flex;
@@ -58,6 +59,7 @@
    .sign_up_view .sign_up_link,
    .account_view .account_link {
       color: var(--activeLink);
+      border-color: var(--titleColor);
    }
    
    

@@ -86,10 +86,10 @@
       
    }
    .home_view .section + .section {
-      border-top: solid 1px var(--linkColor);      
+      border-top: solid 1px var(--lineColor);      
    }
    .button.call_to_action {
-      background: #fff;
+      background: var(--background2);
       color: var(--linkColor);
       border-color: var(--activeLink)
    }

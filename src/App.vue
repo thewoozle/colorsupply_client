@@ -47,13 +47,18 @@
 		:root {
 			--mainColor				: #0C0D0F; 		
          --textColor          : #241f1a;
-         --backgroundColor    : #fbf9ee;
-         --titleColor         : #4eb7d9;
+         --backgroundColor    : #fffffc;
+         --background2        : #ffffff;
+         --lightText          : #ffffff;
+         --titleColor         : #00bbff;
          --linkColor          : #afadab;
          --activeLink         : #463a2d;
          --activeColor        : #fbea8c;
          --borderColor        : #907cff;
-         --buttonColor        : #6bb8d4;
+         --buttonColor        : #69b5d5;
+         --alertColor         : #ec5447;
+         --lineColor          : #cdcdd0;
+         --grayedoutColor     : #c1c1c1;
 	
 		}
 		
@@ -79,9 +84,14 @@
          color: var(--textColor);
       }
       a,button,
+      label,
+      .label,
       .nav_link,
+      .title.page_title,
+      .input_message,
       .link {
          font-family: Questrial, sans-serif;
+         letter-spacing: .04em;
       }
       
       .title {
@@ -92,7 +102,6 @@
       .title {
          display: flex;
          font-weight: 500;
-         text-transform: uppercase;
          color: var(--titleColor);
       }
 		.site_title {
@@ -100,14 +109,29 @@
          line-height: 1.25em;
          width: 100%;
          justify-content: center;
+         text-transform: uppercase;
          text-align: center;
 		}
 		.page_title {
-         
+         color: var(--textColor);
+         justify-content: center;
+         text-align: center;
+         font-size: 2.5rem;
+         width: 100%;
+         font-weight: 300;
+         line-height: 1.25em;
+      }
+      
+		.page_title .text {
+         display: flex;  
+         font: inherit;        
+         border-bottom: solid 2px var(--titleColor);
 		}
 		
 		.section_title {
+         
 		}
+      
 		/*  -----------------------------------------------------------------------------------------------------
 										COMMON STYLES
 			-----------------------------------------------------------------------------------------------------    */ 
@@ -155,8 +179,14 @@
          border: solid 1px var(--borderColor);
          border-radius: .1rem;
          background: var(--buttonColor);
-         color: #fff;
+         color: var(--lightText);
          text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
+      }
+      
+      .link {
+         display: flex;
+         color: var(--buttonColor);
+         border-bottom: var(--lineColor);
       }
 		
 
@@ -166,6 +196,63 @@
 			-----------------------------------------------------------------------------------------------------
 		*/ 
       
+      .form_row {
+         position: relative;
+         display: flex;
+            flex-wrap: wrap;
+         width: 100%;
+      }
+      .form_row + .form_row {
+         margin-top: 1rem;
+      }
+      .form_row .input_wrapper {
+         display: flex;
+            flex-wrap: wrap;
+         width: 20rem;   
+      }
+      .input_wrapper label {
+         display: flex;
+         width: 100%;
+         padding: .5rem 1rem;
+         color: var(--textColor);
+         font-size: .95rem;
+         line-height: 1em;
+      }
+      .text_box {
+         display: flex;
+         width: 100%;
+         padding: 1rem;
+         background: var(--background2);
+         border: solid 1px var(--textColor);
+         color: var(--titleColor);
+         font-size: 1.1rem;
+         line-height: 1em;
+      }
+      .form_row .input_message {
+         position: absolute;
+            left: 100%;
+            top: 50%;
+         display: flex;
+            align-items: center;
+         color: var(--alertColor);
+         font-size: .95rem;
+         width: 24rem;
+         padding: 0 0 0 2rem;
+      }
+      .form_controls {
+         display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+         margin: 2rem 0 0 0;   
+         width: 100%;         
+      }
+      
+      .form_controls .links {
+         display: flex;
+         width: 100%;
+         margin: 1rem 0 0 0;
+         justify-content: space-around;
+      }
       
 		
 		/*  -----------------------------------------------------------------------------------------------------
@@ -182,15 +269,23 @@
 		.page_wrapper {
 			position: relative;
 			width: 100vw;
-         max-width: 1024px;
+         max-width: 1200px;
 			min-height: 100vh;
          overflow: hidden;
 		}
       .section,
       .section .section_content {
          display: flex;
+         width: 100%;
+         margin-top: 3rem;
          flex-wrap: wrap;
       }
+      .section .section_element {
+         display: flex;
+            flex-wrap: wrap;
+         margin-top: 2rem;
+      }
+      
       .section p {
          line-height: 1.15em;
       }
