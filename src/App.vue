@@ -182,6 +182,12 @@
          color: var(--lightText);
          text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
       }
+      .button:disabled {
+         pointer-events: none;
+         cursor: no-drop;
+         opacity: .75;
+         filter: grayscale(90%);
+      }
       
       .link {
          display: flex;
@@ -238,7 +244,9 @@
          font-size: .95rem;
          width: 24rem;
          padding: 0 0 0 2rem;
+         pointer-events: none;
       }
+      
       .form_controls {
          display: flex;
             justify-content: space-around;

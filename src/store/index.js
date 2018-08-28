@@ -19,25 +19,33 @@
       
       
       process_login({commit}, formData) {
-         var   vm = this,
-               _formData = new FormData();
-          
-         Object.entries(formData).forEach((item)=>{
-            console.log(item[0], item[1]);
-            _formData.append(item[0], item[1]);	
-         });
-         
-         console.log(_formData);
-         //Axios.post(apiDomain+'_login', _formData, formData, {
-         Axios.post(apiDomain+'pauth/token', _formData, formData, {
-               headers : {'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}
-            }).then((response) => {		
+         var   vm = this;
+         Axios.post(apiDomain+'_login', formData).then((response) => {		
             console.log(response.data);
             //commit('set_location', location);          
          }, (err) => {
 				  console.log('error: '+err.statusText);
          });
+      },
+      
+      
+      process_signup({commit}, formData) {
+         var   vm = this,
+               response;
+               
+         return new Promise((resolve, reject) => {
+               
+            Axios.post(apiDomain+'_signup', formData).then((response) => {		
+               console.log(response.data);
+               
+               resolve(response.data);
+               //commit('set_location', location);          
+             }, (err) => {
+               reject(err.response.data);
+            });
+         });
       }
+      
       
       
    }
