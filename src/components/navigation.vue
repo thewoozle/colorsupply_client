@@ -6,7 +6,7 @@
             <router-link class="nav_link create_link" to="/create"><span class="first_letter">C</span>reate</router-link>
             <router-link class="nav_link my_colors_link" to="/mycolors"><span class="first_letter">M</span>y <span class="first_letter">C</span>olors</router-link>
             <router-link class="nav_link premium_link" to="/premium"><span class="first_letter">P</span>remium</router-link>
-            <router-link class="nav_link login_link" to="/login"><span class="first_letter">L</span>og in</router-link>
+            <router-link class="nav_link login_link" v-if="" to="/login"><span class="first_letter">L</span>og in</router-link>
             <router-link class="nav_link sign_up_link" to="/signup"><span class="first_letter">S</span>ign up</router-link>
             <router-link class="nav_link account_link" to="/account">Account</router-link>
          </nav>

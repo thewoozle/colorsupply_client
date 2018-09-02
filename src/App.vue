@@ -238,6 +238,8 @@
          position: absolute;
             left: 100%;
             top: 50%;
+            z-index: -1;
+         opacity: 0;   
          display: flex;
             align-items: center;
          color: var(--alertColor);
@@ -245,6 +247,10 @@
          width: 24rem;
          padding: 0 0 0 2rem;
          pointer-events: none;
+      }
+      .form_row .input_message.show {
+         z-index: auto;
+         opacity: 1;
       }
       
       .form_controls {

@@ -11,7 +11,7 @@
                         <label  class="label">Email Address</label>
                         <input type="text" class="text_box" v-model="formData.email" />
                      </div>
-                     <span class="input_message">Oops! That email address is not recognized.</span>
+                     <span class="input_message" v-if="formErrors.email">Oops! That email address is not recognized.</span>
                   </div>
                   
                   <div class="form_row">
@@ -49,6 +49,7 @@
 				data() {
 					return{
                   formData    : {},
+                  formErrors  : {},
 					}
 				},
 				
