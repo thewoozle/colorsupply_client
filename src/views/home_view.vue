@@ -15,7 +15,56 @@
          
          
          <section class="section instructions">
-         
+            <div class="section_content">
+               <span class="title section_title">Copy the Hex Values</span>
+               <p>Copy/paste the hex values or grab a screenshot to sample in Photoshop. All palettes are free to use.</p>
+               <div class="content_body">
+                <div class="content_element">
+                    <div class="image"><img src="@/assets/images/kyle_miller.svg" alt="Kyle Miller"></div>
+                    <div class="designer_name">Kyle Miller</div>
+                    <div class="content_body_color">
+                        <div class="color_element">
+                            <div class="color-box bg-kyle"></div>
+                            <div class="text-box">#ed5740</div>
+                        </div>
+                        <div class="color_element">
+                            <div class="color-box bg-miller"></div>
+                            <div class="text-box">#a6d7df</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_element">
+                    <div class="image"><img src="@/assets/images/steve_scott.svg" alt="Steve Scott"></div>
+                    <div class="designer_name">Steve Scott</div>
+                    <div class="content_body_color">
+                        <div class="color_element">
+                            <div class="color-box bg-steve"></div>
+                            <div class="text-box">#f8d14c</div>
+                        </div>
+                        <div class="color_element">
+                            <div class="color-box bg-scott"></div>
+                            <div class="text-box">#2c9fd1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_element">
+                    <div class="image"><img src="@/assets/images/mei_tan.svg" alt="Mei Tan"></div>
+                    <div class="designer_name">Mei Tan</div>
+                    <div class="content_body_color">
+                        <div class="color_element">
+                            <div class="color-box bg-mei"></div>
+                            <div class="text-box">#3d9cdf</div>
+                        </div>
+                        <div class="color_element">
+                            <div class="color-box bg-tan"></div>
+                            <div class="text-box">#cd6136</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               
+               
+            </div>
          </section>
          
          <section class="section pros_colors">
@@ -104,5 +153,55 @@
       width: 100%;
       justify-content: center;
    }
+   .section.instructions .content_body {
+      display: flex;
+         justify-content: space-around;
+      padding: 1rem 2rem;   
+   }
+   .section.instructions .content_element {
+      display: flex;
+         flex-wrap: wrap;
+      width: 30%;
+   }
+   .section.instructions p {
+      font-size: 1.65rem;
+      margin: 1rem 0;
+   }
+   .section.instructions .content_body .image {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+   }
+   .section.instructions .content_body .designer_name {
+      display: flex;
+         justify-content: center;
+         align-items: center;
+      width: 100%;   
+      font-size: 2rem;
+      line-height: 1em;      
+      
+   }
+   .section.instructions .content_body .content_body_color{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      
+   }
+   .section.instructions .content_body .color_element {
+      display: flex;
+      width: 40%;
+      flex-wrap: wrap;
+      
+   }
+   .section.instructions .content_body {
+      
+      
+   }
+   .section.instructions .content_body {
+      
+      
+   }
+   
+   
 	
 	</style>

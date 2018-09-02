@@ -98,7 +98,6 @@
                process_login() {
                   var   vm = this;
                   vm.$store.dispatch('process_signup', vm.formData).then((response)=>{
-                     console.log(response);
                      response.uuid? vm.$router.push('/create') : '';   
                   },(err) =>{
                      console.log(err);

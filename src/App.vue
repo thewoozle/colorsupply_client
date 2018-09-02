@@ -83,6 +83,7 @@
          font-family: Merriweather, "adobe-caslon-pro",serif;
          color: var(--textColor);
       }
+      
       a,button,
       label,
       .label,
@@ -129,7 +130,8 @@
 		}
 		
 		.section_title {
-         
+         font-size: 4rem;
+         text-transform: uppercase;
 		}
       
 		/*  -----------------------------------------------------------------------------------------------------
@@ -287,6 +289,19 @@
 			min-height: 100vh;
          overflow: hidden;
 		}
+      .main_content {
+         display: flex;
+            flex-wrap: wrap;
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         overflow-Y: auto;
+      }
+      .main_content .sections {
+         display: flex;
+            flex-wrap: wrap;
+         width: 100%;         
+      }
       .section,
       .section .section_content {
          display: flex;
