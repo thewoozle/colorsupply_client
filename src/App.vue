@@ -54,6 +54,7 @@
          --linkColor          : #afadab;
          --activeLink         : #463a2d;
          --activeColor        : #fbea8c;
+         --highlightColor     : #ffe538;
          --borderColor        : #907cff;
          --buttonColor        : #69b5d5;
          --alertColor         : #ec5447;
@@ -131,6 +132,7 @@
 		
 		.section_title {
          font-size: 4rem;
+         line-height: 1.25em;
          text-transform: uppercase;
 		}
       
@@ -193,6 +195,7 @@
       
       .link {
          display: flex;
+            flex-wrap: nowrap;
          color: var(--buttonColor);
          border-bottom: var(--lineColor);
       }

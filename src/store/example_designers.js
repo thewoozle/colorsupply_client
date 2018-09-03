@@ -1,0 +1,31 @@
+
+   const exampleDesigners = [
+   { 'name' : 'Coen Pohl',             'link' : 'https://www.behance.net/coenpohl',       'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Kyle Miller',           'link' : 'http://www.kylemillercreative.com/',     'image' : 'kyle_miller.svg',  'color1' : '#ed5740','color2' : '#a6d7df','example': true },
+   { 'name' : 'Steve Scott',           'link' : 'http://stevescott.com.au/',              'image' : 'steve_scott.svg',  'color1' : '#f8d14c','color2' : '#2c9fd1','example': true },
+   { 'name' : 'Mei Tan.svg',           'link' : 'https://www.behance.net/meiytan',        'image' : 'mei_tan.svg',      'color1' : '#3d9cdf','color2' : '#cd6136','example': true },
+   { 'name' : 'Sami Halim ',           'link' : 'https://www.behance.net/samyhalim',      'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Agris Bobrovs ',        'link' : 'http://www.agrisbobrovs.lv/',            'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Anastasiia Andriichuk', 'link' : 'http://anastiia.myportfolio.com/',       'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Olia Marchenko',        'link' : 'https://www.behance.net/gallery/22183763/Ecosynthesis','image'  : '',  'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Aleksandar Savic ',     'link' : 'https://dribbble.com/almigor',           'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Dustin Wallace ',       'link' : 'http://www.wallacedsgn.com/',            'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Nicci Martin ',         'link' : 'https://www.behance.net/niccimartin',    'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Lucas Wakamatsu ',      'link' : 'https://www.behance.net/lucaswaka',      'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Meg Robichaud ',        'link' : 'http://www.meg.is/',                     'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Jeremy Booth ',         'link' : 'http://www.jeremy-booth.com/',           'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Daniel Triendl ',       'link' : 'http://danieltriendl.com/',              'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Josh Warren ',          'link' : 'http://joshwarrendesign.com/',           'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Anna Katrin Karlsson ', 'link' : 'http://www.forestry.no/',                'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Olia Marchenko ',       'link' : 'https://www.behance.net/gallery/22183763/Ecosynthesis','image'  : '',  'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Kathrin Honesta ',      'link' : 'http://kathrinhonesta.tumblr.com/',      'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Jonathan Calugi ',      'link' : 'http://happyloverstown.eu/',             'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Steve Scott ',          'link' : 'http://stevescott.com.au/',              'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Alejandra Ballesteros ','link' : 'https://www.behance.net/Aleebaes',       'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Lili des Bellons ',     'link' : 'http://lilidesbellons.com/',             'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Liana Jegers ',         'link' : 'http://www.lianajegers.com/',            'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Jonathan Calugi ',      'link' : 'http://happyloverstown.eu/',             'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   { 'name' : 'Asuka Watanabee ',      'link' : 'http://asukawatanabe.com/',              'image' : '',                 'color1' : '',       'color2' : '',       'example': false },
+   ]
+   
+   export {exampleDesigners}

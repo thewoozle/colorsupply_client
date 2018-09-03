@@ -2,6 +2,7 @@
    import Vuex from 'vuex'   
 	import Axios from 'axios'
 	import VueAxios from 'vue-axios'   
+   import {exampleDesigners} from './example_designers'
    
 	import {apiDomain} from '../config'
 	
@@ -10,13 +11,12 @@
 	Vue.use(VueAxios, Axios);
       
    const state = {
-      userInfo       : {},    
-      formMessages   : {},
-      
+      userInfo          : {},    
+      formMessages      : {},
+      exampleDesigners  : exampleDesigners,
    }
    
    const actions = {
-      
       
       process_login({commit}, formData) {
          var   vm = this;
