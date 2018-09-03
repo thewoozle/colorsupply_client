@@ -129,10 +129,24 @@
          font: inherit;        
          border-bottom: solid 2px var(--titleColor);
 		}
+      .paragraph_title {
+         display: flex;
+         width: 100%;
+         line-height: 1.5em;         
+      }
+      .subtitle {
+         display: flex;
+         font-size: 1.65rem;
+         line-height: 1.5em;
+         font-weight: bold;
+         color: #000;
+         letter-spacing: .05em;         
+      }
 		
 		.section_title {
-         font-size: 4rem;
-         line-height: 1.25em;
+         font-size: 3.5rem;
+         line-height: 1em;
+         padding: 1rem 0;
          text-transform: uppercase;
 		}
       
