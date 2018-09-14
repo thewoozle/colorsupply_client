@@ -155,6 +155,12 @@
       padding: 0 3rem;      
    }
    
+   .concept_link {
+      display: inline-flex;
+      line-height: inherit;
+      color: var(--linkColor);
+   }
+   
    .home_view .section + .section {
       border-top: solid 1px var(--lineColor);      
    }

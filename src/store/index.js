@@ -20,10 +20,27 @@
       
       process_login({commit}, formData) {
          var   vm = this;
-         Axios.post(apiDomain+'_login', formData).then((response) => {	
-         }, (err) => {
-				  console.log('error: '+err.statusText);
+         
+         return new Promise((resolve, reject) =>{
+            Axios.post(apiDomain+'_login', formData).then((response) => {	
+               if(response.data.userReturn.userInfo) {
+                  commit('set_user_info', response.data.userReturn.userInfo);
+               }
+               resolve(response.data.userReturn);
+               
+            }, (err) => {
+                 console.log('error: '+err.statusText);
+                 reject(err);
+            });
          });
+      },
+      
+      check_login({commit}) {
+         if(sessionStorage) {
+            if(sessionStorage.userInfo) {
+               commit('set_user_info', JSON.parse(sessionStorage.userInfo));               
+            }
+         }         
       },
       
       
@@ -53,6 +70,10 @@
          console.log(target);
          commit('clear_form_message', target);
       },
+      
+      logout({commit}) {
+         commit('set_logout');
+      }
       
       
       
@@ -92,8 +113,14 @@
       
       set_user_info: (state, info) => {
          Vue.set(state, 'userInfo', info);
+         if(sessionStorage) {
+            sessionStorage.setItem('userInfo', JSON.stringify(info));
+         }
       },
       
+      set_logout: (state) => {
+         Vue.set(state, 'userInfo', {});
+      }
    }
    
    

@@ -17,9 +17,9 @@
                   <div class="form_row">
                      <div class="input_wrapper">
                         <label class="label">Password</label>
-                        <input type="password" class="text_box" v-model="formData.password" />
+                        <input type="password" class="text_box" v-model="formData.password"  @keyup="$delete(formErrors, 'password')"/>
                      </div>
-                     <span class="input_message">Password not recognized.</span>
+                     <span v-if="formErrors.password" class="input_message" :class="formErrors.password? 'show' : ''"  >Password not recognized.</span>
                   </div>
                   
                   <div class="form_controls">
@@ -77,8 +77,9 @@
                
                process_login() {
                   var   vm = this;
-                  vm.$store.dispatch('process_login', vm.formData).then(()=>{                     
-                     vm.userInfo.user_name? vm.$router.push('/create') : '';                      
+                  vm.$store.dispatch('process_login', vm.formData).then((response)=>{  
+                     response.message? vm.formErrors = response.message : '';
+                     response.userInfo? vm.$router.push('/create') : '';
                   });
                   
                     

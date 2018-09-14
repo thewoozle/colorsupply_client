@@ -27,6 +27,10 @@
             }
          },
          
+         created() {
+            this.$store.dispatch('check_login').then(()=>{});
+         },
+         
          components: {
             'navigation'   : navigation, 
             'page_footer'  : page_footer
@@ -38,6 +42,7 @@
    
    <style>   
       @import './assets/css/reset.css';
+      @import './assets/css/all.css';
       @import './assets/fonts/fonts.css';
 		
 		
@@ -49,6 +54,7 @@
          --textColor          : #241f1a;
          --backgroundColor    : #fffffc;
          --background2        : #ffffff;
+         --background3        : #f8f8f8;
          --lightText          : #ffffff;
          --titleColor         : #00bbff;
          --linkColor          : #afadab;
@@ -90,6 +96,7 @@
       .label,
       .nav_link,
       .title.page_title,
+      .navigation .nav_dropdown .text,
       .input_message,
       .link {
          font-family: Questrial, sans-serif;
@@ -300,15 +307,17 @@
 			background: var(--backgroundColor);
 		}	
 		.page_wrapper {
+         display: flex;
+            justify-content: center;
 			position: relative;
 			width: 100vw;
-         max-width: 1200px;
 			min-height: 100vh;
          overflow: hidden;
 		}
       .main_content {
          display: flex;
             flex-wrap: wrap;
+            justify-content: center;
          width: 100%;
          height: 100%;
          overflow: hidden;
@@ -317,7 +326,9 @@
       .main_content .sections {
          display: flex;
             flex-wrap: wrap;
-         width: 100%;         
+         width: 100%;       
+         max-width: 1200px;
+         padding: 2rem 0 5rem 0;
       }
       .section,
       .section .section_content {

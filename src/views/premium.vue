@@ -1,6 +1,6 @@
 
 	<template>
-		<div class="component">
+		<div class="sections">
 		
 		</div>
 	</template>
@@ -10,7 +10,7 @@
 			import { mapGetters } from 'vuex'
 			
 			export default{
-				name: '[ name ]',
+				name: 'pemium',
 				
 				data() {
 					return{
